@@ -1,7 +1,7 @@
 //!¿Qué son los operadores?
 //! Operadores de asignación
 let w=5 //La variable x se asigna con el valor 5
-// `+=`,`-=`,`+=`,`/=`,`%=`
+// `+=`,`-=`,`*=`,`/=`,`%=`
 let z=10
 z+=5 // z=z+5// z=10+5 
   // z=15 
