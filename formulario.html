@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Formulario</h1>
+    <form action="" method="POST">
+           <label for="">Ingrese su Nombre</label>
+           <input id="nombre" type="text">
+           <label for="">Ingrese su Email</label>
+           <input type="email">
+           <label for="">Ingrese Mensaje</label>
+           <textarea  rows="5"></textarea>
+           <input type="submit" value="Enviar">
+    </form>
+    <script>
+        function enviarFormulario(evento) {
+            let nombre= document.getElementById("nombre").value;
+            console.log(nombre);
+            
+
+        }
+    </script>
+
+</body>
+</html>
