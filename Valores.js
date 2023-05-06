@@ -161,6 +161,9 @@ console.log(n);
 n:11
 m:11
 
+console.log(false || "maria");
+console.log(false || "false"); 
+
 
 
 

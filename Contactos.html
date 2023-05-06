@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*Volvamos a nuestra lista de contactos. Después de algunos ajustes recientes (es decir, el emplear un arreglo y objetos), en realidad comienza a parecerse a una lista. Sin embargo, quedaba un problema bastante grave. El cambio de datos en la lista, como agregar un nuevo contacto, debe proporcionarse de inmediato en el código del programa. ¿Qué sucede si queremos darle al usuario la posibilidad de ingresar los datos del contacto agregado mientras se ejecuta el programa? Modifica el programa para agregar, al final de la lista, no el contacto, que se da en el código, sino el que el usuario dará durante la ejecución del programa. Usa el método `prompt` para hacer esto. Al final, muestra el primer y último contacto de la lista. en javascript*/
+
+// Definir nuestra lista de contactos
+const contactos = [
+    {nombre:"Juana1",telefono:"777776"},
+    {nombre:"Juana2",telefono:"777777"},
+    {nombre:"Juana3",telefono:"777778"},
+    {nombre:"Juana4",telefono:"777779"},
+]
+
+//Pedir al usuario que ingrese el nombre , el numero de telefono del nuevo contacto
+let nombre=prompt("Ingresa el nombre del nuevo contacto 🤓")
+let telefono=prompt("Ingresa el telefono del nuevo contacto ✔")
+
+//Creacion del objeto donde se guardaran los datos del nuevo contacto
+let nuevoContacto={nombre:nombre,telefono:telefono}
+console.log(nuevoContacto);
+// Agregar el nuevo contacto al final de lista
+contactos.push(nuevoContacto)
+
+//Mostrar el primer y ultimo contacto de la lista al usuario
+console.log(`Primer contacto es : ${contactos[0].nombre} ${contactos[0].telefono}`);
+console.log(`Último  contacto es : ${contactos[contactos.length-1].nombre} ${contactos[contactos.length-1].telefono}`);
+
+    </script>
+</body>
+</html>
