@@ -117,11 +117,22 @@ let arregloDeArreglos= [[1,2,3],[1,4,9]] // 2 arreglo elementos
 console.log(arregloDeArreglos[0]);
 console.log(arregloDeArreglos[1]);
 
-let frutas=['🥝','🍓','🍊','🍟']
-
 for (const fruta of frutas) {
     console.log(fruta)
 }
+let frutas=['🥝','🍓','🍊','🍟']
+
+for (const fruta in frutas) {
+  console.log(fruta)
+}
+let usuarios=[{nombre:'usuario1',edad:30},{nombre:'usuario2',edad:30},{nombre:'usuario3',edad:30}]
+
+let usuario={nombre:'usuario1',edad:30}
+
+for (const propiedad in usuario) {
+    console.log(propiedad );
+}
+
 
 
 

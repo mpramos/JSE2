@@ -25,7 +25,7 @@
         }];
         let opcion = "";
         while (opcion !== "salir") {
-            opcion = prompt("¿Que quieres hacer? (primero, ultimo,nuevo, salir)")
+            opcion = prompt("¿Que quieres hacer? (primero, ultimo,nuevo, salir,todos)")
 
             switch (opcion) {
                 case "primero":
@@ -49,6 +49,25 @@
                     let contacto = {name:nombre,phone:telefono,email:email}
                     contacts.push(contacto);
                     alert(`Nombre : ${contacto.name} Email: ${contacto.email} Phone ${contacto.phone}`)
+                    break
+                case "todos":
+                    if(contacts.length===0)
+                    alert("La lista de contactos está vacía")
+                    else{
+                        alert("Los contactos son:")
+                        // for(let i=0;i<=contacts.length -1;i++){
+                        //     alert(`Nombre : ${contacts[i].name} Telefono: ${contacts[i].phone} Email : ${contacts[i].email} `);
+                        // }
+                        for (let contact  of contacts ) {
+                          alert(`Nombre : ${contact.name} , Telefono: ${contact.phone} , Email : ${contact.email}` ) 
+                        // }
+                        // for (const contact of contacts) { 
+                        //    for (const prop in contact) {
+                        //         alert(prop)
+                        //    }
+                        // alert(contact)
+                         }
+                    }
                     break
                 case "salir":
                     console.log("Adios");    
