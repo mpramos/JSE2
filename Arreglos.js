@@ -117,6 +117,12 @@ let arregloDeArreglos= [[1,2,3],[1,4,9]] // 2 arreglo elementos
 console.log(arregloDeArreglos[0]);
 console.log(arregloDeArreglos[1]);
 
+let frutas=['🥝','🍓','🍊','🍟']
+
+for (const fruta of frutas) {
+    console.log(fruta)
+}
+
 
 
 

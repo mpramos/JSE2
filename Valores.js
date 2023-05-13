@@ -164,7 +164,24 @@ m:11
 console.log(false || "maria");
 console.log(false || "false"); 
 
+console.log(false && true);
+console.log(true && false);
+console.log("maria" && false);
+console.log('' && "maria");
+console.log(0 && "maria");
+console.log("juana" && "maria");
 
+
+
+
+let nombre="maria"
+if(nombre){
+        console.log(nombre);
+} else{
+    console.log("no hay nombre");
+}
+
+console.log("nombre" && true);
 
 
 

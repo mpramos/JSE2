@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let contacts = [{
+            name: "Maxwell Wright",
+            phone: "(0191) 719 6495",
+            email: "Curabitur@nonummyac.co.uk"
+        }, {
+            name: "Raja Villarreal",
+            phone: "0866 398 2895",
+            email: "posuere@sed.com"
+        }, {
+            name: "Helen Richards",
+            phone: "0800 1111",
+            email: "libero@convallis.edu"
+        }];
+        let opcion = "";
+        while (opcion !== "salir") {
+            opcion = prompt("¿Que quieres hacer? (primero, ultimo,nuevo, salir)")
+
+            switch (opcion) {
+                case "primero":
+                    if(contacts.length>0){
+                        alert(`Nombre : ${contacts[0].name} Telefono: ${contacts[0].phone} Email : ${contacts[0].email} `);
+                    }else{
+                        console.log("No hay contactos");
+                    }
+                    break;
+                case "ultimo":
+                    if(contacts.length>0){
+                        alert(`Nombre : ${contacts[contacts.length-1].name} Telefono: ${contacts[contacts.length-1].phone} Email : ${contacts[contacts.length-1].email} `);
+                    }else{
+                        console.log("No hay contactos");
+                    }
+                    break
+                 case "nuevo":
+                    let nombre= prompt("Ingresa el nombre del contacto")   
+                    let telefono= prompt("Ingresa el telefono del contacto")   
+                    let email= prompt("Ingresa el email del contacto")  
+                    let contacto = {name:nombre,phone:telefono,email:email}
+                    contacts.push(contacto);
+                    alert(`Nombre : ${contacto.name} Email: ${contacto.email} Phone ${contacto.phone}`)
+                    break
+                case "salir":
+                    console.log("Adios");    
+                    break
+                default:
+                    console.log("Opcion invalida");
+                    break;
+            }
+        }
+    </script>
+</body>
+
+</html>
