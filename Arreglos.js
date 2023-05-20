@@ -134,6 +134,17 @@ for (const propiedad in usuario) {
 }
 
 
+//! for VS forEach
+let frutas=['🥝','🍓','🍊','🍟']
+frutas.forEach(element => {
+    console.log(element);
+});
+for (let index = 0; index < frutas.length; index+=2) {
+    const element = frutas[index];
+    console.log(element);
+}
+
+
 
 
 
