@@ -134,4 +134,98 @@ function Factorial(n) {
     return n > 1 ? n * Factorial(n - 1) : 1
 }
 console.log(Factorial(6));
+//! funcion sincrona
+let interna = function () {
+    console.log('hola yo soy la funcion interna');
+}
+let externa = function (callback) {
+    console.log('externa 1');
+    callback()
+    console.log('externa 2');
+}
+console.log('test1')
+externa(interna)
+console.log('test2')
 
+//! funcion asincrona
+
+let internaA = function () {
+    console.log('hola yo soy la funcion interna');
+}
+
+let externaA = function (callback) {
+    console.log('externa 1');
+    setTimeout(callback, 3000)//1
+    console.log('externa 2');
+}
+
+console.log('test1')
+externaA(internaA)
+console.log('test2')
+
+//! FUNCIONES TAREAS
+//! 1 TAREA
+let numbers = [10, 20, 5, 9]
+
+let sorted = numbers.sort((a, b) => b - a)
+console.log(sorted);
+//! 2 TAREA
+
+function add(a, b) {
+    if (!Number.isInteger(a) || !Number.isInteger(b)) {
+        return NaN
+    }
+    return a + b
+}
+
+function sub(a, b) {
+    if (!Number.isInteger(a) || !Number.isInteger(b)) {
+        return NaN
+    }
+    return a - b
+
+}
+
+function mult(a, b) {
+    if (!Number.isInteger(a) || !Number.isInteger(b)) {
+        return NaN
+    }
+    return a * b
+
+}
+
+console.log(add(12, 10)); // -> 22
+console.log(mult(12, 10.1)); // -> NaN
+console.log(sub(12, 10)); // -> NaN
+
+//! 3 TAREA
+
+let add = (a, b) => !Number.isInteger(a) || !Number.isInteger(b) ? NaN : a + b
+let sub = (a, b) => !Number.isInteger(a) || !Number.isInteger(b) ? NaN : a - b
+let mult = (a, b) => !Number.isInteger(a) || !Number.isInteger(b) ? NaN : a * b
+
+console.log(sub(12, 10)); // -> 2
+console.log(mult(10, 10.1)); // -> NaN
+
+//! 4 Tarea
+
+let add = (a, b) => !Number.isInteger(a) || !Number.isInteger(b) ? NaN : a + b
+let sub = (a, b) => !Number.isInteger(a) || !Number.isInteger(b) ? NaN : a - b
+let mult = (a, b) => !Number.isInteger(a) || !Number.isInteger(b) ? NaN : a * b
+// 2
+let action=(callback,a,b)=>callback(a,b)
+
+console.log(action(add, 12, 10)); // -> 22
+console.log(action(sub, 12, 10)); // -> 2
+console.log(action(mult, 10, 10.1)); // -> NaN
+// 1
+function suma(a,b) {
+    return a+b
+}
+function name(callback,a,b) {
+    callback(a,b)
+}
+// 3
+let action1= function (callback,a,b) {
+    return callback(a,b)
+}
