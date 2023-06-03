@@ -6,6 +6,7 @@
 function fechaActual() {
     let hoy=new Date()
     let dia=hoy.getDate()
+    let name="maria"
     return dia
 }
 function outer() {
@@ -18,4 +19,9 @@ function inner() {
     return "Hola desde inner"
 }
 console.log(outer())
-console.log(fechaActual());
+//console.log(fechaActual());
+
+let end = 2; 
+for(let i=1; i<=end; i++) { 
+    console.log(i); 
+}
