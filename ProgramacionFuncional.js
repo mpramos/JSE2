@@ -122,14 +122,17 @@ setTimeout(saludo,2000)
 let arreglo14=[1,2,3,4,5]
 let cuadradosArreglo14=arreglo14.map(elemento=>elemento*elemento)
 console.log(cuadradosArreglo14);
-console.log(arreglo14);
+console.log(arreglo14)
 let names=['Maria','Juanita','Pepito']
 let names2=names.map(name=>name.toUpperCase().slice(0,3))
-console.log(names2);
+let names3=names.map(name=>name.toLowerCase().slice(0,3))
+console.log(names2)
+console.log(names3)
+console.log(names);
 //filter
 let arreglo15=[1,2,3,4,5]
 let paresArreglo15=arreglo15.filter(elemento=>elemento%2===0)
-console.log(arreglo15);
+console.log(arreglo15)
 console.log(paresArreglo15)
 //reduce
 let arreglo16=[1,2,3,4,5]
