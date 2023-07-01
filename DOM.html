@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="titulo" id="primerTitulo">Primer Titulo</h1>
+    <h1 class="titulo" id="segundoTitulo">Segundo Titulo</h1>
+    <h1 class="titulo" id="tercerTitulo">Tercer Titulo</h1>
+    <h1></h1>
+    <ul>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+    </ul>
+   
+    <script>
+        //   const todoLosTitulos= document.getElementsByTagName('h1')
+        //   console.log(todoLosTitulos)
+        //   console.log(todoLosTitulos.length)
+
+        //   for (let i = 0; i < todoLosTitulos.length ; i++){
+        //     console.log(todoLosTitulos[i]);
+        //   }
+        //     const todosLosTituloPorClase= document.getElementsByClassName('titulo')
+        //     console.log(todosLosTituloPorClase);
+        
+        //     const primerElemento= document.getElementById('primerTitulo')
+        //     console.log(primerElemento);
+        // let todosTitulos=document.querySelectorAll('h1')  
+        // console.log(todosTitulos);
+        //   for (let i = 0; i < todosTitulos.length ; i++){
+        //     console.log(todosTitulos[i]);
+        //   }
+       let primerElemento= document.querySelector('#primerTitulo')
+       console.log(primerElemento);
+    //    let todosElementosClaseTitulo= document.querySelectorAll('h1');
+    //     todosElementosClaseTitulo[3].className='titulo'
+    //     todosElementosClaseTitulo[3].id='cuartoTitulo'
+    //     console.log(todosElementosClaseTitulo[3]);
+
+    let titulos= document.querySelectorAll('h1')
+    titulos.forEach((titulo,i)=>{
+        if (i%2===0) {
+            titulo.style.color='green'
+            titulo.style.fontSize='30px'
+            titulo.style.backgroundColor='red'
+        }else{
+            titulo.style.color='red'
+            titulo.style.backgroundColor='green'
+            titulo.style.fontSize='10px'
+        }
+    })
+    titulos[3].setAttribute('class','titulo')
+    titulos[3].setAttribute('id','cuartoTituloo')
+    titulos[3].textContent='Cuarto Titulo'
+//    const listas=` <li>1</li>
+//         <li>2</li>
+//         <li>3</li>
+//         <li>4</li>
+//         <li>5</li>`
+const ul=document.querySelector('ul')
+ul.innerHTML=''
+            
+          
+    </script>
+</body>
+</html>

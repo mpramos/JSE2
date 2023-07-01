@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+ </ul>
+ <ol class="otraLista">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+ </ol>
+<script>
+    let titulo=document.createElement('h1')
+    titulo.className='titulo'
+    titulo.style.fontSize='24px'
+    titulo.textContent='Creando un h1 desde javascript'
+    document.body.appendChild(titulo)
+    let subtitulo
+    for (let i = 0; i < 3; i++) {
+                subtitulo=document.createElement('h2')
+                subtitulo.className='subtitulo'
+                subtitulo.style.fontSize='16px'
+                subtitulo.style.backgroundColor='blue'
+                subtitulo.style.color='white'
+                subtitulo.textContent='Creando un h2 desde javascript'
+                document.body.appendChild(subtitulo)
+    }
+    // const ul=document.querySelector('ul')
+    // const listas=document.querySelectorAll('li')
+    // for (const list of listas) {
+    //     ul.removeChild(list)
+    // }
+    const ul=document.querySelector('ul')
+    console.log(ul);
+    ul.innerHTML=''
+    const ol=document.querySelector('ol')
+    console.log(ol);
+    ol.innerHTML=''
+
+</script>    
+</body>
+
+</html>
